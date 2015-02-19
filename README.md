@@ -1,6 +1,6 @@
 # Vim Cargo Dispatch
 
-Simple vim command bindings to quickly run cargo stuff via [Dispatch][https://github.com/tpope/vim-dispatch]
+Simple vim command bindings to quickly run cargo stuff via [Dispatch](https://github.com/tpope/vim-dispatch)
 
 ## Commands Available, mapping with their Cargo equivalant:
 
