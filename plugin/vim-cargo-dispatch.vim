@@ -1,4 +1,4 @@
-if !exists('g:vim_cargo_dispatch')
+if exists('g:vim_cargo_dispatch')
   finish
 endif
 
@@ -37,3 +37,4 @@ command CargoUpdate :Dispatch cargo update<cr>
 "     update      Update dependencies listed in Cargo.lock
 
 " See 'cargo help <command>' for more information on a specific command.
+:
