@@ -1,4 +1,6 @@
-21-02-2015
+# Changelog
+
+## 0.0.1
 
 * Allow running dispatch implictly, removing the dependency. This makes it possible
 to run any dispatcher or cargo variant you like.
