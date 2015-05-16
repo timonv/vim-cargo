@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+* Set compiler and makeprg to cargo and change default command to make
+
 ## 0.0.1
 
 * Allow running dispatch implictly, removing the dependency. This makes it possible
