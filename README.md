@@ -13,6 +13,23 @@ Simple vim command bindings to quickly run cargo stuff from vim.
 * CargoTest
 * CargoUpdate
 
+## Installation
+
+It's recommended to use a plugin manager to manage your vim plugins. A few examples:
+
+### Vundle
+
+Plugin 'timonv/vim-cargo'
+
+### Plug
+
+Plug 'timonv/vim-cargo'
+
+
+### NeoBundle
+
+NeoBundle 'timonv/vim-cargo'
+
 ## Usage
 
 Simply run one of the commands. By default it just delegates to cargo.

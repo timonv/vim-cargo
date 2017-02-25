@@ -3,8 +3,11 @@ if exists('g:vim_cargo')
 endif
 let vim_cargo=1
 
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs setlocal makeprg=cargo
+
 if !exists('g:cargo_command')
-  let g:cargo_command = "!cargo {cmd}"
+  let g:cargo_command = "make {cmd}"
 endif
 
 com! -nargs=* CargoBench call cargo#run('bench ' . <q-args>)
