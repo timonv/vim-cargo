@@ -10,10 +10,14 @@ if !exists('g:cargo_command')
   let g:cargo_command = "make {cmd}"
 endif
 
-com! CargoBuild call cargo#run('build')
-com! CargoRun call cargo#run('run')
-com! CargoTest call cargo#run('test')
-com! CargoBench call cargo#run('bench')
+com! -nargs=* CargoBench call cargo#run('bench ' . <q-args>)
+com! -nargs=* CargoBuild call cargo#run('build ' . <q-args>)
+com! -nargs=* CargoClean call cargo#run('clean ' . <q-args>)
+com! -nargs=* CargoDoc call cargo#run('doc ' . <q-args>)
+com! -nargs=* CargoRun call cargo#run('run ' . <q-args>)
+com! -nargs=* CargoTest call cargo#run('test ' . <q-args>)
+com! -nargs=* CargoUpdate call cargo#run('update ' . <q-args>)
+com! -complete=file -nargs=+ CargoNew call cargo#run('new ' . <q-args>)
 
 func! cargo#run(cmd)
   let s:cargo_command = substitute(g:cargo_command, "{cmd}", a:cmd, 'g')
